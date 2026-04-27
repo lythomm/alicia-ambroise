@@ -86,7 +86,7 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <!-- <Preloader @loaded="onLoaded" /> -->
+  <Preloader @loaded="onLoaded" />
 
   <Navbar
     :class="{ 'opacity-0': isLoading }"
