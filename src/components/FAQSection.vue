@@ -38,7 +38,7 @@ const toggle = (index) => {
     >
       <!-- Premium Texture Overlay -->
       <div
-        class="absolute inset-0 opacity-[0.02] pointer-events-none bg-grain mix-blend-multiply"
+        class="absolute inset-0 opacity-[0.03] pointer-events-none bg-grain"
       ></div>
 
       <div class="relative z-10">
@@ -108,7 +108,7 @@ const toggle = (index) => {
               </button>
 
               <div
-                class="grid transition-all duration-500 ease-[cubic-bezier(0.4,0,0.2,1)] will-change-[grid-template-rows,opacity]"
+                class="grid transition-all duration-500 ease-[cubic-bezier(0.4,0,0.2,1)] will-change-[grid-template-rows,opacity] transform-gpu"
                 :class="
                   activeIndex === index
                     ? 'grid-rows-[1fr] opacity-100'

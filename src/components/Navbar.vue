@@ -142,7 +142,7 @@ onUnmounted(() => {
       >
         <div
           v-if="isMenuOpen"
-          class="fixed inset-0 bg-brand-dark z-[55] flex flex-col items-center justify-center px-8 reveal-active"
+          class="fixed inset-0 bg-brand-dark z-[55] flex flex-col items-center justify-center px-8 reveal-active transform-gpu"
         >
           <!-- Close Button -->
           <button
@@ -169,7 +169,7 @@ onUnmounted(() => {
               v-for="(link, i) in [
                 { label: 'Projets', href: '#work' },
                 { label: 'Services', href: '#services' },
-                { label: 'À propos', href: '#about-alicia' },
+                { label: 'A propos', href: '#about-alicia' },
                 { label: 'Méthode', href: '#process' },
                 { label: 'Avis', href: '#reviews' },
                 { label: 'FAQ', href: '#faq' },
