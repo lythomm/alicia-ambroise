@@ -10,6 +10,7 @@ import FAQSection from "./components/FAQSection.vue";
 import AuditSection from "./components/AuditSection.vue";
 import ReviewsSection from "./components/ReviewsSection.vue";
 import FooterSection from "./components/FooterSection.vue";
+import AboutSection from "./components/AboutSection.vue";
 import Preloader from "./components/Preloader.vue";
 
 const isLoading = ref(false);
@@ -85,7 +86,7 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <Preloader @loaded="onLoaded" />
+  <!-- <Preloader @loaded="onLoaded" /> -->
 
   <Navbar
     :class="{ 'opacity-0': isLoading }"
@@ -102,6 +103,7 @@ onUnmounted(() => {
       <HeroSection id="home" />
       <PortfolioGrid id="work" />
       <ServicesSection id="services" />
+      <AboutSection />
       <ProcessSection id="process" />
       <ReviewsSection id="reviews" />
       <AuditSection />

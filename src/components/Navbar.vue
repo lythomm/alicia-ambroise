@@ -69,6 +69,11 @@ onUnmounted(() => {
             >Services</a
           >
           <a
+            href="#about-alicia"
+            class="hover:opacity-40 transition-all duration-300"
+            >À propos</a
+          >
+          <a
             href="#process"
             class="hover:opacity-40 transition-all duration-300"
             >Méthode</a
@@ -88,7 +93,7 @@ onUnmounted(() => {
           <BaseButton
             label="Prendre rendez-vous"
             size="sm"
-            class="hidden! md:flex"
+            class="hidden! md:flex!"
             href="https://calendly.com/aliciaambroise-agency/30min?month=2025-12"
           />
 
@@ -164,6 +169,7 @@ onUnmounted(() => {
               v-for="(link, i) in [
                 { label: 'Projets', href: '#work' },
                 { label: 'Services', href: '#services' },
+                { label: 'À propos', href: '#about-alicia' },
                 { label: 'Méthode', href: '#process' },
                 { label: 'Avis', href: '#reviews' },
                 { label: 'FAQ', href: '#faq' },

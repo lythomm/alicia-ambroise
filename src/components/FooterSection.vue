@@ -26,14 +26,25 @@
           >
         </h2>
 
-        <div class="flex flex-col items-center gap-16">
+        <div class="flex flex-col items-center gap-12">
           <BaseButton
             label="Réserver un appel gratuit"
             size="md"
             variant="white"
             href="https://calendly.com/aliciaambroise-agency/30min?month=2025-12"
           />
-          <!-- <div class="flex flex-col items-center gap-4">
+
+          <!-- Separator -->
+          <div class="flex items-center gap-6 opacity-20">
+            <div class="w-12 md:w-36 h-[0.5px] bg-brand-bg"></div>
+            <span
+              class="text-[10px] font-sans font-bold tracking-[0.4em] uppercase"
+              >ou</span
+            >
+            <div class="w-12 md:w-36 h-[0.5px] bg-brand-bg"></div>
+          </div>
+
+          <div class="flex flex-col items-center">
             <p
               class="text-[10px] font-sans font-bold tracking-[0.5em] uppercase opacity-30 mb-2"
             >
@@ -51,7 +62,7 @@
                 class="absolute -bottom-3 left-0 w-full h-[0.5px] bg-brand-bg scale-x-0 transition-transform duration-700 ease-in-out group-hover:scale-x-100 origin-left"
               ></span>
             </a>
-          </div> -->
+          </div>
         </div>
       </div>
 

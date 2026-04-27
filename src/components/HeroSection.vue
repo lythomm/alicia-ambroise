@@ -5,24 +5,24 @@ import heroImage from "../assets/hero-portrait.png";
 <template>
   <section
     id="about"
-    class="h-[100dvh] pt-[7.5rem] md:pt-28 pb-6 md:pb-10 px-4 md:px-8 flex flex-col"
+    class="h-[100dvh] pt-[7.5rem] md:pt-32 pb-6 md:pb-10 px-4 md:px-8 flex flex-col"
   >
     <div
-      class="flex-1 w-full max-w-8xl mx-auto bg-white rounded-[1.25rem] flex flex-col md:flex-row shadow-sm border border-black/5 relative"
+      class="flex-1 w-full max-w-8xl mx-auto flex flex-col md:flex-row shadow-sm relative rounded-[1.25rem]"
     >
       <!-- Left: Content & Mission -->
       <div
-        class="flex-1 md:flex-[1.1] p-8 md:p-16 flex flex-col justify-center relative overflow-hidden"
+        class="flex-1 md:flex-[1.1] p-8 md:p-16 flex flex-col justify-center relative overflow-hidden rounded-t-[1.25rem] md:rounded-l-[1.25rem] md:rounded-r-none"
       >
-        <!-- Further Accentuated Gradient Glows -->
+        <!-- Further Accentuated Gradient Glows (Full Width) -->
         <div
-          class="absolute -top-1/4 -right-1/4 w-[120%] h-[120%] bg-[radial-gradient(circle_at_top_right,_#E8A594_0%,_transparent_80%)] opacity-60 pointer-events-none"
+          class="absolute inset-0 bg-gradient-to-br from-[#FDF8F6] via-white/50 to-[#E8A594]/20 pointer-events-none"
         ></div>
         <div
-          class="absolute top-0 right-0 w-full h-full bg-gradient-to-bl from-[#E8A594]/30 via-transparent to-transparent pointer-events-none"
+          class="absolute top-0 right-0 w-full h-full bg-[radial-gradient(circle_at_top_right,_#E8A594_0%,_transparent_70%)] opacity-40 pointer-events-none"
         ></div>
         <div
-          class="absolute bottom-0 left-0 w-full h-full bg-[radial-gradient(circle_at_bottom_left,_#FDF8F6_0%,_transparent_50%)] opacity-70 pointer-events-none"
+          class="absolute bottom-0 left-0 w-full h-full bg-[radial-gradient(circle_at_bottom_left,_#E8A594_0%,_transparent_70%)] opacity-20 pointer-events-none"
         ></div>
 
         <div class="relative z-10 flex flex-col justify-end h-full">
@@ -44,13 +44,13 @@ import heroImage from "../assets/hero-portrait.png";
             <div class="space-y-2">
               <h1
                 v-reveal
-                class="text-5xl md:text-7xl font-serif leading-[0.9] tracking-tighter text-brand-dark animate-slide-up-text"
+                class="text-4xl md:text-7xl font-serif leading-[0.9] tracking-tighter text-brand-dark animate-slide-up-text"
               >
                 Communiquer
               </h1>
               <h1
                 v-reveal
-                class="text-5xl md:text-7xl font-serif leading-[0.9] tracking-tighter text-brand-dark animate-slide-up-text"
+                class="text-4xl md:text-7xl font-serif leading-[0.9] tracking-tighter text-brand-dark animate-slide-up-text"
                 style="animation-delay: 0.15s"
               >
                 <span class="font-normal italic text-black/20"
@@ -77,7 +77,7 @@ import heroImage from "../assets/hero-portrait.png";
               <!-- Intro Paragraph -->
               <p
                 v-reveal
-                class="text-lg md:text-xl text-brand-dark/50 font-sans leading-relaxed max-w-xl animate-fade-in-up"
+                class="text-sm md:text-xl text-brand-dark/50 font-sans leading-relaxed max-w-xl animate-fade-in-up"
                 style="animation-delay: 0.8s"
               >
                 J'accompagne les marques dans leur rayonnement à travers une
@@ -98,7 +98,7 @@ import heroImage from "../assets/hero-portrait.png";
           v-reveal
           :src="heroImage"
           alt="Alicia Ambroise"
-          class="hero_image absolute inset-0 w-full h-full object-cover contrast-[1.05] rounded-[1.25rem] md:rounded-l-none md:rounded-r-[1.25rem] animate-image-zoom-parallax"
+          class="hero_image absolute inset-0 w-full h-full object-cover contrast-[1.05] rounded-b-[1.25rem] md:rounded-l-none md:rounded-r-[1.25rem] animate-image-zoom-parallax"
           loading="eager"
           fetchpriority="high"
         />

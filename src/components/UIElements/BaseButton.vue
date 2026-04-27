@@ -63,7 +63,7 @@ const sizeClasses = computed(() => {
     :class="[sizeClasses.btn, variantClasses]"
   >
     <span
-      class="relative font-sans font-bold uppercase transition-all duration-500"
+      class="relative font-sans font-bold uppercase transition-all duration-500 text-center"
       :class="sizeClasses.text"
     >
       {{ label }}
