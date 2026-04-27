@@ -1,48 +1,12 @@
 <script setup>
-import { ref } from "vue";
-import horizonImg from "../assets/horizon_square.png";
-import adrianoImg from "../assets/adriano_square.png";
-import conservationImg from "../assets/conservation_square.png";
-import elysianImg from "../assets/elysian_square.png";
+import { useRouter } from "vue-router";
+import { projects } from "../data/projects";
 
-const projects = ref([
-  {
-    id: 1,
-    title: "Horizon",
-    tags: ["Branding", "Stratégie", "Web Design"],
-    image: horizonImg,
-    symbol: "H",
-    color: "#73786D",
-    span: "md:col-span-2",
-  },
-  {
-    id: 2,
-    title: "Adriano",
-    tags: ["Web Design", "UX Research", "E-commerce"],
-    image: adrianoImg,
-    symbol: "A",
-    color: "#9E8B83",
-    span: "md:col-span-1",
-  },
-  {
-    id: 3,
-    title: "Conservation Montgomery",
-    tags: ["Image de Marque", "SEO", "Web"],
-    image: conservationImg,
-    symbol: "C",
-    color: "#8FA39D",
-    span: "md:col-span-1",
-  },
-  {
-    id: 4,
-    title: "Elysian Studio",
-    tags: ["UX/UI Design", "Visuals"],
-    image: elysianImg,
-    symbol: "E",
-    color: "#A4928A",
-    span: "md:col-span-2",
-  },
-]);
+const router = useRouter();
+
+const goToProject = (id) => {
+  router.push(`/project/${id}`);
+};
 </script>
 
 <template>
@@ -69,6 +33,7 @@ const projects = ref([
           v-for="(project, index) in projects"
           :key="project.id"
           v-reveal
+          @click="goToProject(project.id)"
           :class="[
             'group relative cursor-pointer flex flex-col animate-fade-in-up border-b border-black/50 last:border-none pb-10 last:pb-0 md:border-none md:pb-0',
             project.span,
@@ -142,7 +107,7 @@ const projects = ref([
                 <span
                   v-for="tag in project.tags"
                   :key="tag"
-                  class="px-3 py-1.5 border border-black/10 rounded-md text-[12px] font-bold tracking-[0.05em] uppercase text-brand-dark/60"
+                  class="px-3 py-1.5 border border-black/10 rounded-md text-[12px] font-bold tracking-[0.05em] uppercase text-brand-muted"
                 >
                   {{ tag }}
                 </span>

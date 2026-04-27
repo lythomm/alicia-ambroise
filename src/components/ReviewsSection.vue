@@ -145,7 +145,7 @@ const handleDragEnd = (e) => {
         <!-- Left: Heading -->
         <div class="w-full lg:w-[35%] shrink-0">
           <p
-            class="text-[10px] font-bold tracking-[0.4em] uppercase text-brand-dark/50 mb-8"
+            class="text-[10px] font-bold tracking-[0.4em] uppercase text-brand-muted mb-8"
           >
             Témoignages
           </p>
@@ -236,7 +236,7 @@ const handleDragEnd = (e) => {
               :key="review.id"
               class="w-full shrink-0 flex flex-col gap-6 md:gap-10 pr-4 lg:pr-12"
             >
-              <div class="hidden md:block text-brand-dark/10">
+              <div class="hidden md:block text-brand-muted">
                 <svg
                   width="48"
                   height="40"
@@ -253,7 +253,7 @@ const handleDragEnd = (e) => {
 
               <blockquote
                 v-reveal
-                class="text-2xl md:text-4xl font-serif leading-tight tracking-tight text-brand-dark/90 italic animate-fade-in-up"
+                class="text-2xl md:text-4xl font-serif leading-tight tracking-tight text-brand-muted italic animate-fade-in-up"
               >
                 {{ review.text }}
               </blockquote>
@@ -274,11 +274,11 @@ const handleDragEnd = (e) => {
                 </div>
                 <div class="flex flex-col">
                   <span
-                    class="font-bold text-lg lg:text-xl tracking-tight transition-colors duration-500 group-hover:text-brand-dark/70"
+                    class="font-bold text-lg lg:text-xl tracking-tight transition-colors duration-500 group-hover:text-brand-muted"
                     >{{ review.name }}</span
                   >
                   <span
-                    class="text-[11px] font-bold tracking-[0.2em] uppercase text-brand-dark/30"
+                    class="text-[11px] font-bold tracking-[0.2em] uppercase text-brand-muted"
                     >{{ review.role }}</span
                   >
                 </div>

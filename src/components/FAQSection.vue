@@ -47,7 +47,7 @@ const toggle = (index) => {
           <div v-reveal class="lg:w-1/3 animate-fade-in-up">
             <div v-reveal class="overflow-hidden mb-6">
               <span
-                class="text-[11px] font-bold tracking-[0.4em] uppercase text-brand-dark/30 block animate-slide-up-text"
+                class="text-[11px] font-bold tracking-[0.4em] uppercase text-brand-muted block animate-slide-up-text"
                 >Assistance</span
               >
             </div>
@@ -55,12 +55,12 @@ const toggle = (index) => {
               class="text-5xl md:text-7xl font-serif leading-[1.1] tracking-tight mb-8"
             >
               Questions <br class="hidden lg:block" />
-              <span class="italic text-brand-dark/80">fréquemment</span>
+              <span class="italic text-brand-muted">fréquemment</span>
               <br class="hidden lg:block" />
               posées
             </h2>
             <p
-              class="text-xl text-brand-dark/50 font-light leading-relaxed max-w-sm"
+              class="text-xl text-brand-muted font-light leading-relaxed max-w-sm"
             >
               Tout ce que vous devez savoir sur notre future collaboration et
               mon processus stratégique.
@@ -85,7 +85,7 @@ const toggle = (index) => {
                   :class="
                     activeIndex === index
                       ? 'text-brand-dark'
-                      : 'text-brand-dark/70'
+                      : 'text-brand-muted'
                   "
                 >
                   {{ faq.question }}
@@ -117,7 +117,7 @@ const toggle = (index) => {
               >
                 <div class="overflow-hidden">
                   <p
-                    class="text-lg md:text-xl text-brand-dark/50 font-light leading-relaxed max-w-2xl pb-10"
+                    class="text-lg md:text-xl text-brand-muted font-light leading-relaxed max-w-2xl pb-10"
                   >
                     {{ faq.answer }}
                   </p>

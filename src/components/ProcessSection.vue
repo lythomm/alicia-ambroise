@@ -42,9 +42,11 @@ const steps = [
             >Méthodologie</span
           >
           <h2 class="text-4xl md:text-6xl font-serif leading-very-tight">
-            Comment je <br />
-            transforme <br />
-            <span class="italic text-brand-muted">votre vision.</span>
+            <span class="opacity-50">
+              Comment je <br />
+              transforme <br />
+            </span>
+            <span class="italic">votre vision.</span>
           </h2>
         </div>
 
@@ -56,12 +58,12 @@ const steps = [
           class="bg-white p-10 rounded-[1.25rem] border border-black/5 flex flex-col justify-between transition-all duration-500 animate-fade-in"
           :style="{ animationDelay: `${index * 0.1}s` }"
         >
-          <div class="font-serif text-4xl text-brand-dark/10 mb-12">
+          <div class="font-serif text-4xl text-brand-muted mb-12">
             {{ step.id }}
           </div>
           <div>
             <h3 class="text-3xl font-serif mb-4">{{ step.title }}</h3>
-            <p class="text-brand-dark/50 leading-relaxed">
+            <p class="text-brand-muted leading-relaxed">
               {{ step.description }}
             </p>
           </div>
@@ -77,7 +79,7 @@ const steps = [
             <h3 class="text-2xl md:text-3xl font-serif mb-2">
               Prêt à commencer ?
             </h3>
-            <p class="text-brand-dark/60">
+            <p class="text-brand-muted">
               Discutons de votre projet lors d'un premier audit offert.
             </p>
           </div>

@@ -1,7 +1,10 @@
 <script setup>
 import { ref, onMounted, onUnmounted } from "vue";
+import { useRouter, useRoute } from "vue-router";
 import BaseButton from "./UIElements/BaseButton.vue";
 
+const router = useRouter();
+const route = useRoute();
 const isScrolled = ref(false);
 const isMenuOpen = ref(false);
 
@@ -21,6 +24,13 @@ const toggleMenu = () => {
 const closeMenu = () => {
   isMenuOpen.value = false;
   document.body.style.overflow = "";
+};
+
+const navigateTo = (hash) => {
+  if (route.path !== "/") {
+    router.push({ path: "/", hash });
+  }
+  closeMenu();
 };
 
 onMounted(() => window.addEventListener("scroll", handleScroll));
@@ -46,7 +56,7 @@ onUnmounted(() => {
       ]"
     >
       <div class="flex items-center gap-1 group cursor-pointer z-[60]">
-        <a href="#home" @click="closeMenu">
+        <router-link to="/" @click="closeMenu">
           <span
             :class="[
               'font-sans text-xl md:text-2xl tracking-wider font-medium transition-colors duration-500',
@@ -54,37 +64,41 @@ onUnmounted(() => {
             ]"
             >alicia ambroise</span
           >
-        </a>
+        </router-link>
       </div>
 
       <div class="flex items-center gap-6 md:gap-10">
         <!-- Desktop Menu -->
         <div class="hidden md:flex items-center gap-8 lg:gap-10">
-          <a href="#work" class="hover:opacity-40 transition-all duration-300"
-            >Projets</a
-          >
-          <a
-            href="#services"
+          <router-link
+            :to="{ path: '/', hash: '#work' }"
             class="hover:opacity-40 transition-all duration-300"
-            >Services</a
+            >Projets</router-link
           >
-          <a
-            href="#about-alicia"
+          <router-link
+            :to="{ path: '/', hash: '#services' }"
             class="hover:opacity-40 transition-all duration-300"
-            >À propos</a
+            >Services</router-link
           >
-          <a
-            href="#process"
+          <router-link
+            :to="{ path: '/', hash: '#about-alicia' }"
             class="hover:opacity-40 transition-all duration-300"
-            >Méthode</a
+            >À propos</router-link
           >
-          <a
-            href="#reviews"
+          <router-link
+            :to="{ path: '/', hash: '#process' }"
             class="hover:opacity-40 transition-all duration-300"
-            >Avis</a
+            >Méthode</router-link
           >
-          <a href="#faq" class="hover:opacity-40 transition-all duration-300"
-            >FAQ</a
+          <router-link
+            :to="{ path: '/', hash: '#reviews' }"
+            class="hover:opacity-40 transition-all duration-300"
+            >Avis</router-link
+          >
+          <router-link
+            :to="{ path: '/', hash: '#faq' }"
+            class="hover:opacity-40 transition-all duration-300"
+            >FAQ</router-link
           >
         </div>
 
@@ -176,14 +190,14 @@ onUnmounted(() => {
               ]"
               :key="link.href"
             >
-              <a
-                :href="link.href"
+              <router-link
+                :to="{ path: '/', hash: link.href }"
                 @click="closeMenu"
                 class="block text-5xl md:text-6xl font-serif text-white hover:text-brand-muted transition-all duration-500 hover:scale-105 active:scale-95 animate-slide-up-text"
                 :style="{ animationDelay: `${300 + i * 100}ms` }"
               >
                 {{ link.label }}
-              </a>
+              </router-link>
             </div>
           </div>
 

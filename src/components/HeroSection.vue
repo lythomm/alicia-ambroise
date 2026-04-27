@@ -34,7 +34,7 @@ import heroImage from "../assets/hero-portrait.png";
               style="animation-delay: 0.2s"
             >
               <span
-                class="px-6 py-2.5 border border-black/10 rounded-full text-[10px] font-bold tracking-[0.4em] uppercase text-black/40 bg-white/40 backdrop-blur-md"
+                class="px-6 py-2.5 border border-black/10 rounded-full text-[10px] font-bold tracking-[0.4em] uppercase text-brand-muted bg-white/40 backdrop-blur-md"
               >
                 Ma Mission
               </span>
@@ -50,10 +50,10 @@ import heroImage from "../assets/hero-portrait.png";
               </h1>
               <h1
                 v-reveal
-                class="text-4xl md:text-7xl font-serif leading-[0.9] tracking-tighter text-brand-dark animate-slide-up-text"
+                class="text-4xl md:text-7xl font-serif leading-[0.9] tracking-tighter animate-slide-up-text"
                 style="animation-delay: 0.15s"
               >
-                <span class="font-normal italic text-black/20"
+                <span class="font-normal italic text-brand-muted"
                   >pour impacter.</span
                 >
               </h1>
@@ -77,7 +77,7 @@ import heroImage from "../assets/hero-portrait.png";
               <!-- Intro Paragraph -->
               <p
                 v-reveal
-                class="text-sm md:text-xl text-brand-dark/50 font-sans leading-relaxed max-w-xl animate-fade-in-up"
+                class="text-sm md:text-xl text-brand-muted font-sans leading-relaxed max-w-xl animate-fade-in-up"
                 style="animation-delay: 0.8s"
               >
                 J'accompagne les marques dans leur rayonnement à travers une

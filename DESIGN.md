@@ -11,6 +11,7 @@ Les couleurs sont sélectionnées pour créer une atmosphère "Papier Premium" e
 | `brand-bg`     | `var(--color-brand-bg)`     | `#EAE9E2` | Fond principal, texture papier beige clair.           |
 | `brand-card`   | `var(--color-brand-card)`   | `#E3E2DB` | Fond des cartes et sections secondaires.              |
 | `brand-dark`   | `var(--color-brand-dark)`   | `#1A1A1A` | Texte principal et éléments de contraste.             |
+| `brand-muted`  | `var(--color-brand-muted)`  | `#1A1A1A80`| Texte secondaire, légendes et éléments atténués.      |
 | `brand-accent` | `var(--color-brand-accent)` | `#1A1A1A` | Accentuation (monochromatique pour plus de luxe).     |
 | `white`        | `var(--color-white)`        | `#F5F4F4` | Blanc cassé premium utilisé pour les fonds de cartes. |
 

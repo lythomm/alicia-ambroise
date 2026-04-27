@@ -41,7 +41,7 @@ const services = [
           <div class="lg:sticky lg:top-32 space-y-4 md:space-y-8">
             <div v-reveal class="overflow-hidden">
               <span
-                class="text-[10px] font-bold tracking-[0.4em] uppercase text-brand-dark/40 block animate-slide-up-text"
+                class="text-[10px] font-bold tracking-[0.4em] uppercase text-brand-muted block animate-slide-up-text"
                 >Expertises</span
               >
             </div>
@@ -58,7 +58,7 @@ const services = [
             </h2>
             <p
               v-reveal
-              class="text-xl text-brand-dark/60 leading-relaxed max-w-sm animate-fade-in-up"
+              class="text-xl text-brand-muted leading-relaxed max-w-sm animate-fade-in-up"
               style="animation-delay: 0.3s"
             >
               Une approche holistique de la communication pour faire rayonner
@@ -90,11 +90,11 @@ const services = [
           >
             <div class="flex items-start justify-between">
               <h3
-                class="text-4xl md:text-5xl font-serif mb-6 transition-transform duration-700"
+                class="text-3xl md:text-5xl font-serif mb-6 transition-transform duration-700"
               >
                 {{ service.title }}
               </h3>
-              <span class="text-2xl font-mono text-brand-dark/50">{{
+              <span class="text-2xl font-mono text-brand-muted">{{
                 service.id
               }}</span>
             </div>
@@ -102,12 +102,12 @@ const services = [
               <span
                 v-for="tag in service.tags"
                 :key="tag"
-                class="bg-white px-4 py-2 rounded-full text-[11px] font-bold tracking-widest uppercase text-brand-dark"
+                class="bg-white px-4 py-2 rounded-full text-[9px] md:text-[11px] font-bold tracking-widest uppercase text-brand-dark"
               >
                 {{ tag }}
               </span>
             </div>
-            <p class="text-xl text-brand-dark/60 leading-relaxed max-w-xl">
+            <p class="text-xl text-brand-muted leading-relaxed max-w-xl">
               {{ service.details }}
             </p>
           </div>
