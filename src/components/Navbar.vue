@@ -133,10 +133,10 @@ onUnmounted(() => {
     <!-- Fullscreen Mobile Menu -->
     <Teleport to="body">
       <Transition
-        enter-active-class="transition-all duration-700 cubic-bezier(0.85, 0, 0.15, 1)"
+        enter-active-class="transition-[transform,opacity] duration-500 ease-[cubic-bezier(0.4,0,0.2,1)]"
         enter-from-class="opacity-0 -translate-y-full"
         enter-to-class="opacity-100 translate-y-0"
-        leave-active-class="transition-all duration-500 ease-in-out"
+        leave-active-class="transition-[transform,opacity] duration-400 ease-in-out"
         leave-from-class="opacity-100 translate-y-0"
         leave-to-class="opacity-0 -translate-y-full"
       >

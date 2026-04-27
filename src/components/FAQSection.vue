@@ -78,10 +78,10 @@ const toggle = (index) => {
             >
               <button
                 @click="toggle(index)"
-                class="w-full flex justify-between items-center py-8 text-left group transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] cursor-pointer"
+                class="w-full flex justify-between items-center py-8 text-left group transition-all duration-500 ease-[cubic-bezier(0.4,0,0.2,1)] cursor-pointer"
               >
                 <span
-                  class="text-xl md:text-2xl font-serif tracking-tight transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)]"
+                  class="text-xl md:text-2xl font-serif tracking-tight transition-transform duration-500 ease-[cubic-bezier(0.4,0,0.2,1)]"
                   :class="
                     activeIndex === index
                       ? 'text-brand-dark'
@@ -94,10 +94,10 @@ const toggle = (index) => {
                   class="relative w-8 h-8 flex items-center justify-center rounded-full border border-brand-dark/10 group-hover:border-brand-dark/30 transition-colors duration-500"
                 >
                   <div
-                    class="absolute w-3 h-[1.5px] bg-brand-dark transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]"
+                    class="absolute w-3 h-[1.5px] bg-brand-dark transition-transform duration-500 ease-[cubic-bezier(0.4,0,0.2,1)]"
                   ></div>
                   <div
-                    class="absolute w-3 h-[1.5px] bg-brand-dark transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]"
+                    class="absolute w-3 h-[1.5px] bg-brand-dark transition-transform duration-500 ease-[cubic-bezier(0.4,0,0.2,1)]"
                     :class="
                       activeIndex === index
                         ? 'rotate-0 opacity-0'
@@ -108,16 +108,16 @@ const toggle = (index) => {
               </button>
 
               <div
-                class="grid transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)]"
+                class="grid transition-all duration-500 ease-[cubic-bezier(0.4,0,0.2,1)] will-change-[grid-template-rows,opacity]"
                 :class="
                   activeIndex === index
-                    ? 'grid-rows-[1fr] opacity-100 mb-10'
+                    ? 'grid-rows-[1fr] opacity-100'
                     : 'grid-rows-[0fr] opacity-0'
                 "
               >
                 <div class="overflow-hidden">
                   <p
-                    class="text-lg md:text-xl text-brand-dark/50 font-light leading-relaxed max-w-2xl"
+                    class="text-lg md:text-xl text-brand-dark/50 font-light leading-relaxed max-w-2xl pb-10"
                   >
                     {{ faq.answer }}
                   </p>
